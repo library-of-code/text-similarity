@@ -1,1 +1,16 @@
+1.WSV-SCNN-SV stands for(Word set vectors , Shallow ConvolutionNN and Sentence Vector)
+2.The model works in the same flow as mentioned above.
 
+3.Ususally word vectors cannot convey the inner meaning of a sentence, for that we can use the binaray gram approach which transform the sentence word-vectors set into a 3d tensor of size n*n*d (d is word vector dimensionality)
+
+4.The binary gramed tensor for the sentence is then passed to a shallow convolution-Neuralnet which outputs a sentence vector for comparison.for 
+
+5.Fully connected layers are depricated from this model instead we use K-max pooling for creating end model sentence vector, for comparison.
+
+6.Sentence vector similarity is done by comparing the cosine similarity b/w two output sentence-vectors.
+
+
+7.Refrences:
+  
+    i)  https://github.com/LiuHuiwen/A-Novel-Sentence-Similarity-Model-with-Word-Embedding-based-on-Convolutional-Neural-Network
+    ii) https://arxiv.org/abs/1404.2188
