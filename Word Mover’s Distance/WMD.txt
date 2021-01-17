@@ -1,0 +1,22 @@
+1. WMD also works perfectly incase of synonyms. The main principle of WMD is that similar words 		    should have a similar vector. 
+
+2. The typical example is
+
+Sentence 1: Obama speaks to the media in Illinois
+Sentence 2: The president greets the press in Chicago
+
+3. Word Mover’s Distance targets both semantic and syntactic approach to get similarity between text documents
+
+4. The WMD distance measures the dissimilarity between two text documents as the minimum amount of distance that the embedded words of one document need to “travel” to reach the embedded words of another document.
+
+5. Best Avg time Complexity: O(p³ log p) while p is number of unique word
+
+6. First one is Word Centroid Distance (WCD) which is summarizing the lower bound distance between. Second approach is Relaxed Word Moving Distance (RWMD) which is using the closet distance without considering there are multiple words transforming to single words.
+
+7. Taking the previous sentence as an example. Assuming that shortest word in sentence of all word in sentence 1 is “president”, it will use summarize these score instead of pairing one by one. So that the time complexity reduce to O(p²).
+
+8. Reference: 
+	
+	a. https://towardsdatascience.com/word-distance-between-word-embeddings-cc3e9cf1d632
+	b. https://radimrehurek.com/gensim/auto_examples/tutorials/run_wmd.html
+	c. https://towardsdatascience.com/word-movers-distance-for-text-similarity-7492aeca71b0
